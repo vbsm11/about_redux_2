@@ -11,7 +11,7 @@ declare global {
 
 const rootReducers = combineReducers({
   usersData: usersReducer,
-  userCount: usersCountReducer,
+  usersCount: usersCountReducer,
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

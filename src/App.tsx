@@ -6,7 +6,6 @@ import {v1} from 'uuid';
 import {CustomButton, UsersCountValue} from 'components';
 import {UsersList} from 'components/UsersList';
 import {generateRandomName} from 'utils';
-import {SetTimeoutType} from 'types';
 
 const DELAY = 500;
 
@@ -19,8 +18,8 @@ export const App = () => {
   const [isAddNewUser, setIsAddNewUser] = useState<boolean>(false);
 
   useEffect(() => {
-    let timeoutId: SetTimeoutType = setTimeout((): void => {
-      setIsAddNewUser(false);
+    let timeoutId = setTimeout(() => {
+      setIsAddNewUser(false)
     }, DELAY);
 
     return () => clearTimeout(timeoutId);
